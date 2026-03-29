@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Mohd Arif - Data Analyst | Business Analyst | Python & SQL Specialist. Turning data into actionable insights." />
+  <meta name="keywords" content="Data Analyst, Business Analyst, Python, SQL, Pandas, NumPy, Excel, Power BI, Mohd Arif" />
+  <meta name="author" content="Mohd Arif" />
+  <meta property="og:title" content="Mohd Arif | Data Analyst Portfolio" />
+  <meta property="og:description" content="Turning Data into Actionable Insights" />
+  <meta property="og:type" content="website" />
+  <title>Mohd Arif | Data Analyst Portfolio</title>
+
+  <!-- Google Fonts: Poppins + Space Grotesk -->
+   <link rel="shortcut icon" href="profile_photo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- AOS – Animate On Scroll -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       LOADING SCREEN
+  ============================================================ -->
+  <div id="loader" class="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">MA</div>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
+      <p class="loader-text">Initialising Portfolio…</p>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       STICKY NAVBAR
+  ============================================================ -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-container">
+      <!-- Logo -->
+      <a href="#hero" class="nav-logo" aria-label="Home">
+        <span class="logo-box">MA</span>
+        <span class="logo-name">Mohd Arif</span>
+      </a>
+
+      <!-- Desktop nav links -->
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero"        class="nav-link">Home</a></li>
+        <li><a href="#about"       class="nav-link">About</a></li>
+        <li><a href="#skills"      class="nav-link">Skills</a></li>
+        <li><a href="#projects"    class="nav-link">Projects</a></li>
+        <li><a href="#certificates" class="nav-link">Certs</a></li>
+        <li><a href="#contact"     class="nav-link">Contact</a></li>
+      </ul>
+
+      <!-- Right controls -->
+      <div class="nav-controls">
+        <!-- Dark / Light toggle -->
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <i class="fas fa-moon" id="themeIcon"></i>
+        </button>
+        <!-- Hamburger (mobile) -->
+        <button class="hamburger" id="hamburger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       HERO SECTION
+  ============================================================ -->
+  <section id="hero" class="hero">
+    <!-- Animated background orbs -->
+    <div class="hero-orb orb-1"></div>
+    <div class="hero-orb orb-2"></div>
+    <div class="hero-orb orb-3"></div>
+
+    <!-- Floating grid overlay -->
+    <div class="hero-grid"></div>
+
+    <div class="hero-container">
+      <!-- Profile Picture -->
+      <div class="hero-image-wrap" data-aos="zoom-in" data-aos-duration="900">
+        <div class="hero-image-ring">
+          <div class="hero-avatar">
+           <img src="/files/profile_photo.png" alt="Mohd Arif" 
+       style="width:100%; height:100%; object-fit:cover; border-radius:50%;" />
+          </div>
+          <!-- Status badge -->
+          <span class="status-badge">
+            <span class="status-dot"></span> Available for Work
+          </span>
+        </div>
+      </div>
+
+      <!-- Text content -->
+      <div class="hero-content" data-aos="fade-up" data-aos-delay="200">
+        <p class="hero-greeting">Hello, I'm</p>
+        <h1 class="hero-name">Mohd <span class="accent">Arif</span></h1>
+        <div class="hero-titles">
+          <!-- Typewriter rotates through roles -->
+          <span class="typewriter" id="typewriter"></span>
+        </div>
+        <p class="hero-tagline">"Turning Data into Actionable Insights"</p>
+        <p class="hero-bio">
+          Results-oriented Computer Science graduate with strong expertise in
+          data analysis, dashboard building, and business insights generation.
+          Passionate about transforming raw data into compelling stories that
+          drive smarter decisions.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="hero-btns">
+          <a href="Mohd_Arif_Wipro_Resume.pdf" download class="btn btn-primary">
+            <i class="fas fa-download"></i> Download Resume
+          </a>
+          <a href="#contact" class="btn btn-outline">
+            <i class="fas fa-paper-plane"></i> Contact Me
+          </a>
+        </div>
+
+        <!-- Social Icons -->
+        <div class="social-icons">
+          <a href="https://github.com/mohdarif1234" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://linkedin.com/in/arifmohd5761" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="mailto:mohammadarif5761@gmail.com" class="social-link" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-indicator">
+      <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+      <p>Scroll Down</p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       INTRO VIDEO SECTION
+  ============================================================ -->
+  <section id="video" class="video-section section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-label">Watch</span>
+        <h2 class="section-title">Get to Know <span class="accent">Me</span></h2>
+        <p class="section-sub">A quick introduction about my journey, skills, and career goals.</p>
+      </div>
+
+      <div class="video-wrapper" data-aos="fade-up" data-aos-delay="150">
+        <div class="video-glass-card">
+          <!-- Replace the src URL with your actual YouTube video ID -->
+          <div class="video-placeholder" id="videoPlaceholder">
+            <div class="video-play-btn" onclick="loadVideo()">
+              <i class="fas fa-play"></i>
+            </div>
+            <div class="video-thumb-text">
+              <i class="fas fa-video"></i>
+              <p>Click to watch my intro video</p>
+              <span>Data Analyst | Mohd Arif</span>
+            </div>
+          </div>
+          <!-- iframe loads on click -->
+          <iframe
+              id="introVideo"
+              class="video-iframe hidden"
+              src=""
+              data-src="https://www.youtube.com/embed/GfWIeYDnYg0?autoplay=1&rel=0&vq=hd1080"
+              title="Mohd Arif – Introduction Video"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ABOUT SECTION
+  ============================================================ -->
+  <section id="about" class="about-section section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-label">Who I Am</span>
+        <h2 class="section-title">About <span class="accent">Me</span></h2>
+      </div>
+
+      <div class="about-grid">
+        <!-- Left: info cards -->
+        <div class="about-left" data-aos="fade-right" data-aos-delay="100">
+          <div class="about-card glass-card">
+            <div class="about-card-icon"><i class="fas fa-graduation-cap"></i></div>
+            <div class="about-card-body">
+              <h4>Education</h4>
+              <p><strong>B.Tech – Computer Science & Engineering</strong></p>
+              <p>KMCLU, Lucknow &nbsp;|&nbsp; CGPA: <span class="accent">8.25 / 10</span></p>
+            </div>
+          </div>
+
+          <div class="about-card glass-card">
+            <div class="about-card-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="about-card-body">
+              <h4>Location</h4>
+              <p>Aligarh, Uttar Pradesh, India</p>
+              <p class="tag-green">🟢 Open to Relocation</p>
+            </div>
+          </div>
+
+          <div class="about-card glass-card">
+            <div class="about-card-icon"><i class="fas fa-bolt"></i></div>
+            <div class="about-card-body">
+              <h4>Availability</h4>
+              <p>Available <span class="accent">Immediately</span></p>
+              <p>Actively seeking Data / Business Analyst roles</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: bio + traits -->
+        <div class="about-right" data-aos="fade-left" data-aos-delay="200">
+          <p class="about-bio">
+            I'm a passionate <strong>Data Analyst</strong> who loves uncovering hidden stories inside complex datasets.
+            With a strong foundation in <strong>Python, SQL, Pandas, NumPy</strong>, and <strong>Excel Power Query</strong>,
+            I bridge the gap between raw data and boardroom decisions.
+          </p>
+          <p class="about-bio">
+            My journey started with a deep curiosity for numbers and logic, which evolved into hands-on projects
+            analysing thousands of orders, millions in revenue, and real customer behaviour. I believe every dataset
+            has a story — my job is to tell it clearly and compellingly.
+          </p>
+
+          <!-- Traits -->
+          <div class="traits-grid">
+            <div class="trait-item">
+              <i class="fas fa-brain"></i>
+              <span>Analytical Thinking</span>
+            </div>
+            <div class="trait-item">
+              <i class="fas fa-puzzle-piece"></i>
+              <span>Problem Solving</span>
+            </div>
+            <div class="trait-item">
+              <i class="fas fa-users"></i>
+              <span>Team Collaboration</span>
+            </div>
+            <div class="trait-item">
+              <i class="fas fa-chart-line"></i>
+              <span>Data Storytelling</span>
+            </div>
+            <div class="trait-item">
+              <i class="fas fa-skating"></i>
+              <span>Skating (Hobby)</span>
+            </div>
+            <div class="trait-item">
+              <i class="fas fa-swimmer"></i>
+              <span>Swimming (Hobby)</span>
+            </div>
+          </div>
+
+          <!-- Quick stats -->
+          <div class="quick-stats">
+            <div class="stat-box">
+              <span class="stat-number" data-target="3">0</span>
+              <span class="stat-label">Projects</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-number" data-target="8">0</span>+
+              <span class="stat-label">Tech Skills</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-number" data-target="1000">0</span>+
+              <span class="stat-label">Orders Analysed</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SKILLS SECTION
+  ============================================================ -->
+  <section id="skills" class="skills-section section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-label">What I Know</span>
+        <h2 class="section-title">Technical <span class="accent">Skills</span></h2>
+        <p class="section-sub">A snapshot of my technical toolkit — built through real-world projects.</p>
+      </div>
+
+      <!-- Skill category tabs -->
+      <div class="skill-tabs" data-aos="fade-up" data-aos-delay="100">
+        <button class="skill-tab active" data-tab="languages">Languages</button>
+        <button class="skill-tab" data-tab="data">Data & Analytics</button>
+        <button class="skill-tab" data-tab="tools">Tools</button>
+        <button class="skill-tab" data-tab="soft">Soft Skills</button>
+      </div>
+
+      <!-- Languages tab -->
+      <div class="skill-panel active" id="tab-languages" data-aos="fade-up" data-aos-delay="150">
+        <div class="skills-grid">
+          <div class="skill-card glass-card">
+            <div class="skill-icon python"><i class="fab fa-python"></i></div>
+            <h4>Python</h4>
+            <div class="skill-bar"><div class="skill-fill" data-width="90%"></div></div>
+            <span class="skill-pct">90%</span>
+          </div>
+          <div class="skill-card glass-card">
+            <div class="skill-icon sql"><i class="fas fa-database"></i></div>
+            <h4>SQL / MySQL</h4>
+            <div class="skill-bar"><div class="skill-fill" data-width="85%"></div></div>
+            <span class="skill-pct">85%</span>
+          </div>
+          <div class="skill-card glass-card">
+            <div class="skill-icon c"><i class="fas fa-code"></i></div>
+            <h4>C Language</h4>
+            <div class="skill-bar"><div class="skill-fill" data-width="75%"></div></div>
+            <span class="skill-pct">75%</span>
+          </div>
+          <div class="skill-card glass-card">
+            <div class="skill-icon js"><i class="fab fa-js-square"></i></div>
+            <h4>JavaScript</h4>
+            <div class="skill-bar"><div class="skill-fill" data-width="65%"></div></div>
+            <span class="skill-pct">65%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Data & Analytics tab -->
+      <div class="skill-panel" id="tab-data">
+        <div class="skills-grid">
+          <div class="skill-card glass-card">
+            <div class="skill-icon pandas"><i class="fas fa-table"></i></div>
+            <h4>Pandas / NumPy</h4>
+            <div class="skill-bar"><div class="skill-fill" data-width="88%"></div></div>
+            <span class="skill-pct">88%</span>
+          </div>
+          <div class="skill-card glass-card">
+            <div class="skill-icon excel"><i class="fas fa-file-excel"></i></div>
+            <h4>Excel & Power Query</h4>
+            <div class="skill-bar"><div class="skill-fill" data-width="92%"></div></div>
+            <span class="skill-pct">92%</span>
+          </div>
+          <div class="skill-card glass-card">
+            <div class="skill-icon matplotlib"><i class="fas fa-chart-bar"></i></div>
+            <h4>Matplotlib / Seaborn</h4>
+            <div class="skill-bar"><div class="skill-fill" data-width="80%"></div></div>
+            <span class="skill-pct">80%</span>
+          </div>
+          <div class="skill-card glass-card">
+            <div class="skill-icon streamlit"><i class="fas fa-stream"></i></div>
+            <h4>Streamlit</h4>
+            <div class="skill-bar"><div class="skill-fill" data-width="78%"></div></div>
+            <span class="skill-pct">78%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tools tab -->
+      <div class="skill-panel" id="tab-tools">
+        <div class="tools-grid">
+          <div class="tool-badge glass-card"><i class="fab fa-github"></i><span>GitHub</span></div>
+          <div class="tool-badge glass-card"><i class="fab fa-html5"></i><span>HTML / CSS</span></div>
+          <div class="tool-badge glass-card"><i class="fab fa-react"></i><span>Basic React</span></div>
+          <div class="tool-badge glass-card"><i class="fas fa-bolt"></i><span>Vite</span></div>
+          <div class="tool-badge glass-card"><i class="fas fa-code"></i><span>VS Code</span></div>
+          <div class="tool-badge glass-card"><i class="fas fa-paint-brush"></i><span>Canva</span></div>
+          <div class="tool-badge glass-card"><i class="fas fa-file-powerpoint"></i><span>PowerPoint</span></div>
+          <div class="tool-badge glass-card"><i class="fas fa-file-word"></i><span>MS Word</span></div>
+        </div>
+      </div>
+
+      <!-- Soft Skills tab -->
+      <div class="skill-panel" id="tab-soft">
+        <div class="soft-grid">
+          <div class="soft-card glass-card">
+            <i class="fas fa-broom"></i>
+            <h4>Data Cleaning & Wrangling</h4>
+          </div>
+          <div class="soft-card glass-card">
+            <i class="fas fa-chart-pie"></i>
+            <h4>Dashboard Design</h4>
+          </div>
+          <div class="soft-card glass-card">
+            <i class="fas fa-briefcase"></i>
+            <h4>Business Intelligence Reporting</h4>
+          </div>
+          <div class="soft-card glass-card">
+            <i class="fas fa-lightbulb"></i>
+            <h4>Problem Solving & Critical Thinking</h4>
+          </div>
+          <div class="soft-card glass-card">
+            <i class="fas fa-calculator"></i>
+            <h4>Statistical Analysis</h4>
+          </div>
+          <div class="soft-card glass-card">
+            <i class="fas fa-sync-alt"></i>
+            <h4>Agile / Collaborative Work Ethic</h4>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PROJECTS SECTION
+  ============================================================ -->
+  <section id="projects" class="projects-section section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-label">My Work</span>
+        <h2 class="section-title">Featured <span class="accent">Projects</span></h2>
+        <p class="section-sub">Real-world data projects — built, tested, and insight-driven.</p>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Project 1: Sales Dashboard -->
+        <div class="project-card glass-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="project-card-header">
+            <div class="project-number">01</div>
+            <div class="project-icon excel-proj"><i class="fas fa-chart-area"></i></div>
+          </div>
+          <h3 class="project-title">Sales Analysis Dashboard</h3>
+          <p class="project-company"><i class="fas fa-store"></i> Ferns &amp; Petals (FNP)</p>
+          <p class="project-desc">
+            Engineered an interactive Excel dashboard using Power Query, Pivot Tables, dynamic Charts,
+            and Slicers to visualise <strong>1,000+ orders</strong> and <strong>₹35.2L in revenue</strong>.
+            Identified top-performing cities, best-selling products, and peak seasonal trends
+            (Raksha Bandhan, Valentine's Day), directly informing marketing strategy.
+          </p>
+          <!-- Key metrics -->
+          <div class="project-metrics">
+            <span class="metric"><i class="fas fa-receipt"></i> 1,000+ Orders</span>
+            <span class="metric"><i class="fas fa-rupee-sign"></i> ₹35.2L Revenue</span>
+            <span class="metric"><i class="fas fa-check-circle"></i> 100% Data Accuracy</span>
+          </div>
+          <!-- Tech tags -->
+          <div class="tech-tags">
+            <span class="tech-tag">Excel</span>
+            <span class="tech-tag">Power Query</span>
+            <span class="tech-tag">Pivot Tables</span>
+            <span class="tech-tag">Data Viz</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/mohdarif1234/Ferns_-_Petals_Sales_Analysis_Excel_dashboard" target="_blank" rel="noopener" class="btn btn-sm btn-primary">
+              <i class="fab fa-github"></i> View on GitHub
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 2: Python EDA -->
+        <div class="project-card glass-card featured-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="project-card-header">
+            <div class="project-number">02</div>
+            <div class="project-icon python-proj"><i class="fab fa-python"></i></div>
+          </div>
+          <div class="featured-ribbon">⭐ Featured</div>
+          <h3 class="project-title">Customer &amp; Product Analytics</h3>
+          <p class="project-company"><i class="fas fa-analytics"></i> Python EDA</p>
+          <p class="project-desc">
+            Performed exploratory data analysis (EDA) on retail datasets using <strong>Pandas and NumPy</strong>
+            to uncover customer purchasing patterns and revenue drivers. Visualised KPIs with Matplotlib and Seaborn;
+            wrote optimised <strong>SQL queries</strong> against MySQL to extract segment-level summaries
+            and validate Python analysis results.
+          </p>
+          <div class="project-metrics">
+            <span class="metric"><i class="fas fa-users"></i> Customer Segments</span>
+            <span class="metric"><i class="fas fa-database"></i> SQL Validated</span>
+            <span class="metric"><i class="fas fa-chart-bar"></i> KPI Reports</span>
+          </div>
+          <div class="tech-tags">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Pandas</span>
+            <span class="tech-tag">NumPy</span>
+            <span class="tech-tag">Matplotlib</span>
+            <span class="tech-tag">MySQL</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/mohdarif1234" target="_blank" rel="noopener" class="btn btn-sm btn-primary">
+              <i class="fab fa-github"></i> View on GitHub
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 3: Streamlit App -->
+        <div class="project-card glass-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="project-card-header">
+            <div class="project-number">03</div>
+            <div class="project-icon streamlit-proj"><i class="fas fa-globe"></i></div>
+          </div>
+          <h3 class="project-title">Interactive Data Web App</h3>
+          <p class="project-company"><i class="fas fa-laptop-code"></i> Streamlit Application</p>
+          <p class="project-desc">
+            Built a <strong>Streamlit-based web application</strong> to upload CSV datasets and
+            auto-generate summary statistics and visual charts in real time. Enabled non-technical users
+            to explore data through an intuitive browser interface, reducing dependency on manual Excel reporting.
+          </p>
+          <div class="project-metrics">
+            <span class="metric"><i class="fas fa-upload"></i> CSV Upload</span>
+            <span class="metric"><i class="fas fa-magic"></i> Auto Charts</span>
+            <span class="metric"><i class="fas fa-user-friends"></i> Non-Tech Friendly</span>
+          </div>
+          <div class="tech-tags">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Streamlit</span>
+            <span class="tech-tag">Pandas</span>
+            <span class="tech-tag">Data Viz</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/mohdarif1234" target="_blank" rel="noopener" class="btn btn-sm btn-primary">
+              <i class="fab fa-github"></i> View on GitHub
+            </a>
+          </div>
+        </div>
+
+      </div><!-- /projects-grid -->
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CERTIFICATES SECTION
+  ============================================================ -->
+  <section id="certificates" class="certs-section section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-label">Achievements</span>
+        <h2 class="section-title">Certificates &amp; <span class="accent">Courses</span></h2>
+        <p class="section-sub">Continuous learning — always levelling up.</p>
+      </div>
+
+      <div class="certs-grid">
+
+        <div class="cert-card glass-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="cert-icon"><i class="fab fa-python"></i></div>
+          <h4>Python for Data Analysis</h4>
+          <!-- <p>Coursera / NPTEL</p> -->
+          <a href="#" class="btn btn-sm btn-outline cert-btn">
+            <i class="fas fa-external-link-alt"></i> View Certificate
+          </a>
+        </div>
+
+        <div class="cert-card glass-card" data-aos="fade-up" data-aos-delay="80">
+          <div class="cert-icon"><i class="fas fa-database"></i></div>
+          <h4>SQL – Data Management</h4>
+          <!-- <p>HackerRank / Udemy</p> -->
+          <a href="#" class="btn btn-sm btn-outline cert-btn">
+            <i class="fas fa-external-link-alt"></i> View Certificate
+          </a>
+        </div>
+
+        <div class="cert-card glass-card" data-aos="fade-up" data-aos-delay="160">
+          <div class="cert-icon"><i class="fas fa-file-excel"></i></div>
+          <h4>Excel for Business Analytics</h4>
+          <!-- <p>Microsoft / Coursera</p> -->
+          <a href="#" class="btn btn-sm btn-outline cert-btn">
+            <i class="fas fa-external-link-alt"></i> View Certificate
+          </a>
+        </div>
+
+        <div class="cert-card glass-card" data-aos="fade-up" data-aos-delay="240">
+          <div class="cert-icon"><i class="fas fa-chart-bar"></i></div>
+          <h4>Data Visualisation</h4>
+          <!-- <p>Tableau / Power BI Basics</p> -->
+          <a href="#" class="btn btn-sm btn-outline cert-btn">
+            <i class="fas fa-external-link-alt"></i> View Certificate
+          </a>
+        </div>
+
+        <div class="cert-card glass-card" data-aos="fade-up" data-aos-delay="320">
+          <div class="cert-icon"><i class="fas fa-brain"></i></div>
+          <h4>Machine Learning Foundations</h4>
+          <!-- <p>Andrew Ng – Coursera</p> -->
+          <a href="#" class="btn btn-sm btn-outline cert-btn">
+            <i class="fas fa-external-link-alt"></i> View Certificate
+          </a>
+        </div>
+
+        <div class="cert-card glass-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="cert-icon"><i class="fa-solid fa-p"></i></div>
+          <h4>Pandas</h4>
+          <p>kaggle / freeCourse</p>
+          <a href="https://www.kaggle.com/learn/certification/mohdarif5761/pandas" class="btn btn-sm btn-outline cert-btn">
+            <i class="fas fa-external-link-alt"></i> View Certificate
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CONTACT SECTION
+  ============================================================ -->
+  <section id="contact" class="contact-section section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-label">Let's Connect</span>
+        <h2 class="section-title">Get In <span class="accent">Touch</span></h2>
+        <p class="section-sub">I'm open to full-time roles, freelance projects, and collaborations.</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Left: info -->
+        <div class="contact-info" data-aos="fade-right" data-aos-delay="100">
+          <div class="contact-info-card glass-card">
+            <h3>Let's Build Something Together</h3>
+            <p>
+              Whether you're a recruiter looking for your next Data Analyst, a startup needing insights,
+              or a fellow developer — I'd love to connect.
+            </p>
+
+            <div class="contact-details">
+              <a href="mailto:mohammadarif5761@gmail.com" class="contact-detail">
+                <div class="cd-icon"><i class="fas fa-envelope"></i></div>
+                <div>
+                  <span>Email</span>
+                  <p>mohammadarif5761@gmail.com</p>
+                </div>
+              </a>
+              <a href="tel:+918573991870" class="contact-detail">
+                <div class="cd-icon"><i class="fas fa-phone"></i></div>
+                <div>
+                  <span>Phone</span>
+                  <p>(+91) 8573991870</p>
+                </div>
+              </a>
+              <div class="contact-detail">
+                <div class="cd-icon"><i class="fas fa-map-marker-alt"></i></div>
+                <div>
+                  <span>Location</span>
+                  <p>Aligarh, Uttar Pradesh, India</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Availability tags -->
+            <div class="avail-tags">
+              <span class="avail-tag">🟢 Available Immediately</span>
+              <span class="avail-tag">✈️ Open to Relocation</span>
+              <span class="avail-tag">💼 Seeking FT Roles</span>
+            </div>
+
+            <!-- Social links -->
+            <div class="contact-socials">
+              <a href="https://github.com/mohdarif1234" target="_blank" rel="noopener" class="social-link">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="https://linkedin.com/in/arifmohd5761" target="_blank" rel="noopener" class="social-link">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="mailto:mohammadarif5761@gmail.com" class="social-link">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: contact form -->
+        <div class="contact-form-wrap" data-aos="fade-left" data-aos-delay="150">
+          <div class="contact-form-card glass-card">
+            <!-- Success message (hidden initially) -->
+            <div class="form-success hidden" id="formSuccess">
+              <i class="fas fa-check-circle"></i>
+              <h4>Message Sent!</h4>
+              <p>Thanks for reaching out. I'll get back to you within 24 hours.</p>
+            </div>
+
+            <form id="contactForm" novalidate>
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <div class="input-wrap">
+                  <i class="fas fa-user input-icon"></i>
+                  <input type="text" id="name" name="name" placeholder="Your full name" required />
+                </div>
+                <span class="form-error" id="nameError">Please enter your name.</span>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <div class="input-wrap">
+                  <i class="fas fa-envelope input-icon"></i>
+                  <input type="email" id="email" name="email" placeholder="your@email.com" required />
+                </div>
+                <span class="form-error" id="emailError">Please enter a valid email.</span>
+              </div>
+
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <div class="input-wrap">
+                  <i class="fas fa-tag input-icon"></i>
+                  <input type="text" id="subject" name="subject" placeholder="Job opportunity / Collaboration" />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message</label>
+                <div class="input-wrap textarea-wrap">
+                  <i class="fas fa-comment input-icon textarea-icon"></i>
+                  <textarea id="message" name="message" rows="5" placeholder="Write your message here…" required></textarea>
+                </div>
+                <span class="form-error" id="msgError">Please enter a message.</span>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+                <i class="fas fa-paper-plane"></i>
+                <span>Send Message</span>
+                <div class="btn-spinner hidden" id="btnSpinner"></div>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div><!-- /contact-grid -->
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer">
+    <div class="footer-inner container">
+      <div class="footer-logo">
+        <span class="logo-box">MA</span>
+        <span>Mohd Arif</span>
+      </div>
+      <p class="footer-copy">
+        © <span id="year"></span> Mohd Arif. Crafted with <i class="fas fa-heart" style="color:var(--accent)"></i> &amp; ☕
+      </p>
+      <div class="footer-links">
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       BACK TO TOP BUTTON
+  ============================================================ -->
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- AOS Library -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <!-- Main script -->
+  <script src="script.js"></script>
+</body>
+</html>
